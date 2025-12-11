@@ -1,0 +1,47 @@
+<h1>Tasks</h1>
+
+<%= link_to "New Task", new_task_path, class: "btn" %>
+
+<br><br>
+
+<table border="1" cellpadding="6">
+  <tr>
+    <th>Title</th>
+    <th>Status</th>
+    <th>Priority</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Actions</th>
+  </tr>
+
+  <% @tasks.each do |task| %>
+    <tr>
+      <td><%= link_to task.title, task_path(task) %></td>
+
+      <td>
+        <%# Status badge %>
+        <% badge_color =
+            case task.status
+            when "ongoing"   then "blue"
+            when "completed" then "green"
+            when "dropped"   then "red"
+            else "gray"
+            end
+        %>
+        <span style="color:white; padding:4px; background:<%= badge_color %>;">
+          <%= task.status.capitalize %>
+        </span>
+      </td>
+
+      <td><%= task.priority %></td>
+
+      <td><%= task.start_time&.strftime("%d %b %Y %H:%M") %></td>
+      <td><%= task.end_time&.strftime("%d %b %Y %H:%M") %></td>
+
+      <td>
+        <%= button_to "Edit", edit_task_path(task), method: :get %>
+        <%= button_to "Delete", task, method: :delete, form: { data: { turbo_confirm: "Delete this task?" } } %>
+      </td>
+    </tr>
+  <% end %>
+</table>
