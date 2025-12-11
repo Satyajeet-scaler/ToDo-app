@@ -129,24 +129,24 @@ rails server -p 4000
 Below are screenshots demonstrating the key features of the ToDo app:
 
 #### 1. Task List View (Index Page)
-![Task List](docs/screenshots/task-list.png)
+![Task List](https://github.com/Satyajeet-scaler/ToDo-app/blob/main/docs/screenshots/Task_list.png?raw=true)
 *Overview of all tasks with their status, priority, and actions*
 
 #### 2. Create New Task
-![Create Task](docs/screenshots/create-task.png)
+![Create Task](https://github.com/Satyajeet-scaler/ToDo-app/blob/main/docs/screenshots/create_task.png?raw=true)
 *Form to create a new task with all fields*
 
 #### 3. Task Details View
-![Task Details](docs/screenshots/task-details.png)
+![Task Details](https://github.com/Satyajeet-scaler/ToDo-app/blob/main/docs/screenshots/task_details.png?raw=true)
 *Detailed view of a single task*
 
 #### 4. Edit Task
-![Edit Task](docs/screenshots/edit-task.png)
+![Edit Task](https://github.com/Satyajeet-scaler/ToDo-app/blob/main/docs/screenshots/edit_task.png?raw=true)
 *Edit form with pre-filled task data*
 
-#### 5. Task Status Management
-![Status Management](docs/screenshots/status-management.png)
-*Different task statuses: ongoing, completed, and dropped*
+#### 5. Delete Task 
+![Delete Task](https://github.com/Satyajeet-scaler/ToDo-app/blob/main/docs/screenshots/delete_task.png?raw=true)
+*Delete task window*
 
 
 ## Database Schema 📊
@@ -161,8 +161,6 @@ Below are screenshots demonstrating the key features of the ToDo app:
 | start_time | datetime | When the task starts (optional) |
 | end_time | datetime | When the task ends (optional) |
 | priority | integer | Priority level 1-3 (default: 2) |
-| created_at | datetime | Record creation timestamp |
-| updated_at | datetime | Record update timestamp |
 
 ## Usage 💡
 
